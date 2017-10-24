@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="index">
+
+<head>
+  <script type="text/javascript" src="http://code.angularjs.org/1.2.28/angular.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div ng-controller="MainCtrl">
+    <div>
+      Type Your Name :
+      <input type="text" ng-model="name">
+      <br>Name:
+      <span ng-bind="name"></span>
+    </div>
+    <div>
+      <button ng-click="onLoadUsers()" ng-show="!users.length">Load Users</button>
+      <button ng-click="removeUsers()" ng-show="users.length">Remove Users</button>
+      <div ng-repeat="user in users">
+          <span>{{user}}</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
