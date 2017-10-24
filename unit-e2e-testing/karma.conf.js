@@ -8,7 +8,13 @@ module.exports = function (config) {
 			"test/unit/indexSpec.js"
 		],
 		autoWatch: true,
-		browsers: ['Chrome'],
+		browsers: [ 'ChromeCI'],
+                customLaunchers: {
+                        ChromeCI: {
+                        base: 'Chrome',
+                        flags: ['--no-sandbox', '--headless', '--disable-gpu', '--remote-debugging-port=9222']
+                   }
+                },
 		singleRun: true,
 		reporters: ['progress', 'coverage'],
         preprocessors: { 'src/*.js': ['coverage'] }

@@ -8,7 +8,7 @@ describe('MainCtrl', function () {
 		$controller('MainCtrl', {
 			$scope: $scope
 		});
-		expect($scope.name).toEqual('Hello');
+		expect($scope.name).toEqual('Hellddo');
 	}));
 	it('should assign the names to the users', inject(function ($controller) {
 		var $scope = {};
